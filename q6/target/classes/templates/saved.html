@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</head>
+
+			<!-- Navigation Bar-->
+  <div class="container ">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom ">
+  
+      <ul class="nav nav-pills" >
+        <li class="nav-item"><a href="/" class="nav-link text-body-secondary">Home</a></li>
+        <li class="nav-item"><a href="/allusers" class="nav-link text-body-secondary">About</a></li>
+      </ul>
+    </header>
+  </div>
+
+	<h2> Successfully saved user! </h2>
+	
+	
+		<div class="container col-5 pb-5 shadow-lg justify-content-center align-items-center">
+	<h1> Page counter :  </h1>
+	<p id="pagecount" >  </p>
+
+  </div>
+  
+	
+	   <!--Footer-->
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-center align-items-center py-3 my-4 border-top">
+      <h5 class="col-md-4 mb-0 text-body justify-content-center bold">©  c0869346 , Vishal Reddy Guda  </h5>
+    
+      <p class="col-md-4 mb-0 text-body-secondary justify-content-center">Java EE Final Project 2023 Fall</p>
+
+    </footer>
+  </div>
+	<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer">
+    </script>
+	<script>
+  
+	setInterval(function() {
+	$.get("/getHitCount", function( data ) {
+		$("#pagecount").html( `<h2 id="pagecount" > ${data} </h2>` );
+		console.log(data);
+	});
+}, 3000);
+  </script>
+</body>
+</html>

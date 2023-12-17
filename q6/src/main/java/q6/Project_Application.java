@@ -1,0 +1,15 @@
+package q6;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class Project_Application {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SpringApplication.run(Project_Application.class, args);
+
+	}
+
+}
